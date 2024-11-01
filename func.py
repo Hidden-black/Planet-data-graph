@@ -40,7 +40,6 @@ def avail_data():
     9. Perihelion(10^6km)               19. Ring System
     10. Aphelion(10^6km)                20. Global Magnetic Field
     """)
-    pass
 
 
 
@@ -63,7 +62,7 @@ def mainmenu():
         elif uinp==2:
             pass
         elif uinp==3:
-            pass
+            analyse()
         elif uinp==4:
             exit()
     else:
@@ -90,12 +89,19 @@ def analyse():
         """)
     
     ainp= int(input("Enter:"))
-
     if ainp>=1 and ainp <=5:
-        if ainp==1:
-            pass
-        elif ainp==2:
-            pass
+        if ainp==1 or ainp==2:
+            avail_data()
+            imp= int(input("Enter: "))
+            x=data.values[imp-1]
+            ximp=x[1:].astype(float)
+            de= pd.Series(ximp,planets)
+
+            if ainp==1:
+                print(f"{de.idxmax()} Has Highest {max(de)} {x[0]}")
+            else:
+                print(f"{de.idxmin()} Has Lowest {min(de)} {x[0]}")
+
         elif ainp==3:
             pass
         elif ainp==4:
