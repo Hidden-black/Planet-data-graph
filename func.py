@@ -11,8 +11,7 @@ def bar(i):
     plt.xlabel("Planets")
     plt.xticks(rotation=45)
     plt.ylabel(f"{label}",rotation=90)
-    plt.title(f"{label} of Planets")    
-    save_graph()
+    plt.title(f"{label} of Planets")
     plt.show()
 
 
@@ -27,6 +26,16 @@ def point(i):
     plt.title(f"{label} of Planets")
     plt.show()
 
+def point_bool(i):
+    y=data.values[i-1]
+    atx= y[1:].astype(float)
+    label=y[0]
+    plt.plot(planets,atx,marker="8",color="c")
+    plt.xlabel("Planets")
+    plt.xticks(rotation=45)
+    plt.ylabel(f"{label}",rotation=90)
+    plt.title(f"{label} of Planets")
+    plt.show()
 
 
 def avail_data():
@@ -42,8 +51,6 @@ def avail_data():
     9. Perihelion(10^6km)               19. Ring System
     10. Aphelion(10^6km)                20. Global Magnetic Field
     """)
-
-
 
 
 def mainmenu():
@@ -64,8 +71,10 @@ def mainmenu():
         elif uinp==2:
             avail_data()
             i= int(input("Enter: "))
-            if i==6 or i==16 or i==17 or i==19 or i==20:
+            if i==6 or i==16 or i==17:
                 point(i)
+            elif i==19 or i==20:
+                point_bool(i)
             else:
                 bar(i)
 
@@ -83,7 +92,6 @@ def exit():
 
 def disp_data():
     print(data)
-    print("_______________________________________\n")
     mainmenu()
 
 def analyse():
