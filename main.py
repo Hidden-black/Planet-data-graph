@@ -16,3 +16,4 @@ print("""
       """)
 
 func.mainmenu()
+func.exit()
