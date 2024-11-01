@@ -7,12 +7,14 @@ def bar(i):
     y=data.values[i-1]
     atx= y[1:].astype(float)
     label=y[0]
-    plt.bar(planets,atx,marker="8",color="c")
+    plt.bar(planets,atx,color="c")
     plt.xlabel("Planets")
     plt.xticks(rotation=45)
     plt.ylabel(f"{label}",rotation=90)
-    plt.title(f"{label} of Planets")
+    plt.title(f"{label} of Planets")    
+    save_graph()
     plt.show()
+
 
 def point(i):
     y=data.values[i-1]
@@ -60,7 +62,13 @@ def mainmenu():
         if uinp==1:
             disp_data()
         elif uinp==2:
-            pass
+            avail_data()
+            i= int(input("Enter: "))
+            if i==6 or i==16 or i==17 or i==19 or i==20:
+                point(i)
+            else:
+                bar(i)
+
         elif uinp==3:
             analyse()
         elif uinp==4:
@@ -83,8 +91,7 @@ def analyse():
 -------------------------------------
     1. Display Maximum Value 
     2. Display Minimum Value
-    3. Display Data Of A Planet
-    4. Exit
+    3. Exit
 -------------------------------------
         """)
     
@@ -101,11 +108,15 @@ def analyse():
                 print(f"{de.idxmax()} Has Highest {max(de)} {x[0]}")
             else:
                 print(f"{de.idxmin()} Has Lowest {min(de)} {x[0]}")
-
         elif ainp==3:
-            pass
-        elif ainp==4:
             exit()
     else:
         print("Invalid Input")
         analyse()
+
+def save_graph():
+    imp=input(("Do you want to save graph As png (y/n)?"))
+    if imp== "Y" or imp== "y":
+        plt.savefig("test.png")
+    else:
+        breakpoint
