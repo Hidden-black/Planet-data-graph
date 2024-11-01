@@ -67,6 +67,7 @@ def bar(i):
     plt.ylabel(f"{label}",rotation=90)
     plt.title(f"{label} of Planets")
     plt.show()
+    mainmenu()
 
 
 def point(i):
@@ -79,6 +80,7 @@ def point(i):
     plt.ylabel(f"{label}",rotation=90)
     plt.title(f"{label} of Planets")
     plt.show()
+    mainmenu()
 
 def point_bool(i):
     y=data.values[i-1]
@@ -91,6 +93,7 @@ def point_bool(i):
     plt.ylim(-1,2)
     plt.title(f"{label} of Planets")
     plt.show()
+    mainmenu()
 
 def analyse():
     print("""
@@ -112,8 +115,10 @@ def analyse():
 
             if ainp==1:
                 print(f"{de.idxmax()} Has Highest {max(de)} {x[0]}")
+                mainmenu()
             else:
                 print(f"{de.idxmin()} Has Lowest {min(de)} {x[0]}")
+                mainmenu()
         elif ainp==3:
             exit()
     else:
