@@ -15,7 +15,7 @@ def mainmenu():
     
     uinp= int(input("Enter:"))
 
-    if uinp>=1 and uinp <=5:
+    if uinp>=1 and uinp <=4:
         if uinp==1:
             disp_data()
         elif uinp==2:
