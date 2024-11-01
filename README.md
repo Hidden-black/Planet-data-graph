@@ -1,2 +1,2 @@
 # Planet-data-graph
- Graphs of planet data
+ Plotting Graphs of planet data by using data from NASA in an excel file
