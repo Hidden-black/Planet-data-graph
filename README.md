@@ -1,13 +1,5 @@
-#
- /$$$$$$$  /$$                                 /$$                 /$$             /$$              
-| $$__  $$| $$                                | $$                | $$            | $$              
-| $$  \ $$| $$  /$$$$$$  /$$$$$$$   /$$$$$$  /$$$$$$          /$$$$$$$  /$$$$$$  /$$$$$$    /$$$$$$ 
-| $$$$$$$/| $$ |____  $$| $$__  $$ /$$__  $$|_  $$_/         /$$__  $$ |____  $$|_  $$_/   |____  $$
-| $$____/ | $$  /$$$$$$$| $$  \ $$| $$$$$$$$  | $$          | $$  | $$  /$$$$$$$  | $$      /$$$$$$$
-| $$      | $$ /$$__  $$| $$  | $$| $$_____/  | $$ /$$      | $$  | $$ /$$__  $$  | $$ /$$ /$$__  $$
-| $$      | $$|  $$$$$$$| $$  | $$|  $$$$$$$  |  $$$$/      |  $$$$$$$|  $$$$$$$  |  $$$$/|  $$$$$$$
-|__/      |__/ \_______/|__/  |__/ \_______/   \___/         \_______/ \_______/   \___/   \_______/
+![Banner](https://hiddenblack.tixte.co/r/Code_w7LZTsnje3.png)
                                                                     
-A python application to see genral data of planets, Make graphs of them, etc.
+## A python application to see genral data of planets, Make graphs of them, etc.
 
 ![Example](https://hiddenblack.tixte.co/r/python_abS5Ay1Ipt.png)
