@@ -88,6 +88,7 @@ def point_bool(i):
     plt.xlabel("Planets")
     plt.xticks(rotation=45)
     plt.ylabel(f"{label}",rotation=90)
+    plt.ylim(-1,2)
     plt.title(f"{label} of Planets")
     plt.show()
 
