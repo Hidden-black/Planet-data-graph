@@ -3,56 +3,6 @@ import matplotlib.pyplot as plt
 data= pd.read_csv("data.csv")
 planets= data.columns[1:]
 
-def bar(i):
-    y=data.values[i-1]
-    atx= y[1:].astype(float)
-    label=y[0]
-    plt.bar(planets,atx,color="c")
-    plt.xlabel("Planets")
-    plt.xticks(rotation=45)
-    plt.ylabel(f"{label}",rotation=90)
-    plt.title(f"{label} of Planets")
-    plt.show()
-
-
-def point(i):
-    y=data.values[i-1]
-    atx= y[1:].astype(float)
-    label=y[0]
-    plt.plot(planets,atx,marker="8",color="c")
-    plt.xlabel("Planets")
-    plt.xticks(rotation=45)
-    plt.ylabel(f"{label}",rotation=90)
-    plt.title(f"{label} of Planets")
-    plt.show()
-
-def point_bool(i):
-    y=data.values[i-1]
-    atx= y[1:].astype(float)
-    label=y[0]
-    plt.plot(planets,atx,marker="8",color="c")
-    plt.xlabel("Planets")
-    plt.xticks(rotation=45)
-    plt.ylabel(f"{label}",rotation=90)
-    plt.title(f"{label} of Planets")
-    plt.show()
-
-
-def avail_data():
-    print("""
-    1. Mass(10^24kg)                    11. Orbital Period(days)
-    2. Diameter(km)                     12. Orbital Velocity(km/s)
-    3. Density(kg/m3)                   13. Orbital Inclination(degrees)
-    4. Gravity(m/s2)                    14. Orbital Eccentricity
-    5. Escape Velocity(km/s)            15. Obliquity to Orbit(degrees)
-    6. Rotation Period(hours)           16. Mean Temperature(C)
-    7. Length of Day(hours)             17. Surface Pressure(bars)
-    8. Distance from Sun(10^6km)        18. Number of Moons
-    9. Perihelion(10^6km)               19. Ring System
-    10. Aphelion(10^6km)                20. Global Magnetic Field
-    """)
-
-
 def mainmenu():
     print("""
 -------------------------------------
@@ -86,13 +36,60 @@ def mainmenu():
         print("Invalid Input")
         mainmenu()
 
+def disp_data():
+    print(data)
+    mainmenu()
+
+def avail_data():
+    print("""
+    1. Mass(10^24kg)                    11. Orbital Period(days)
+    2. Diameter(km)                     12. Orbital Velocity(km/s)
+    3. Density(kg/m3)                   13. Orbital Inclination(degrees)
+    4. Gravity(m/s2)                    14. Orbital Eccentricity
+    5. Escape Velocity(km/s)            15. Obliquity to Orbit(degrees)
+    6. Rotation Period(hours)           16. Mean Temperature(C)
+    7. Length of Day(hours)             17. Surface Pressure(bars)
+    8. Distance from Sun(10^6km)        18. Number of Moons
+    9. Perihelion(10^6km)               19. Ring System
+    10. Aphelion(10^6km)                20. Global Magnetic Field
+    """)
 
 def exit():
     breakpoint
 
-def disp_data():
-    print(data)
-    mainmenu()
+def bar(i):
+    y=data.values[i-1]
+    atx= y[1:].astype(float)
+    label=y[0]
+    plt.bar(planets,atx,color="c")
+    plt.xlabel("Planets")
+    plt.xticks(rotation=45)
+    plt.ylabel(f"{label}",rotation=90)
+    plt.title(f"{label} of Planets")
+    plt.show()
+
+
+def point(i):
+    y=data.values[i-1]
+    atx= y[1:].astype(float)
+    label=y[0]
+    plt.plot(planets,atx,marker="8",color="c")
+    plt.xlabel("Planets")
+    plt.xticks(rotation=45)
+    plt.ylabel(f"{label}",rotation=90)
+    plt.title(f"{label} of Planets")
+    plt.show()
+
+def point_bool(i):
+    y=data.values[i-1]
+    atx= y[1:].astype(float)
+    label=y[0]
+    plt.plot(planets,atx,marker="8",color="c")
+    plt.xlabel("Planets")
+    plt.xticks(rotation=45)
+    plt.ylabel(f"{label}",rotation=90)
+    plt.title(f"{label} of Planets")
+    plt.show()
 
 def analyse():
     print("""
