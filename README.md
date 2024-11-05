@@ -3,3 +3,14 @@
 ### A python application to see general data of planets, Make graphs of them, etc.
 
 ![Example](https://hiddenblack.tixte.co/r/python_abS5Ay1Ipt.png)
+
+## Setup
+ Dependencies 
+    Python
+        pandas
+        matplotlib
+
+To start run:
+```cmd
+python main.py
+```
