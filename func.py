@@ -1,6 +1,16 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import os
+try:
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import os
+    import time
+except ModuleNotFoundError:
+    print("Some Modules are not installed")
+    print("Installing...")
+    os.system('pip install -r requirements.txt')
+    print("Done")
+    time.sleep(2)
+    os.system('cls')
+    
 
 data= pd.read_csv("data.csv")
 planets= data.columns[1:]

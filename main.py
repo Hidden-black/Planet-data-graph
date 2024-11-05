@@ -1,6 +1,7 @@
 import func
+import os
 
-print("""
+print(f"""
 
 
  /$$$$$$$  /$$                                 /$$                 /$$             /$$              
