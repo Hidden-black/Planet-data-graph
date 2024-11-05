@@ -125,7 +125,7 @@ def k_og(i):
     elif last ==2:
         bar(i)
     elif last ==3:
-        pie_chart()
+        pie_chart(i)
     else:
         print("Invalid Input")
         k_og()
