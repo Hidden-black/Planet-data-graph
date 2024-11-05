@@ -6,9 +6,9 @@
 
 ## Setup
  Dependencies 
-    Python
-        pandas
-        matplotlib
+    Python<br>
+        - pandas<br>
+        - matplotlib<br>
 
 To start run:
 ```cmd
