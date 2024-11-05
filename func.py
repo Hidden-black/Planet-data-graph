@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+
 data= pd.read_csv("data.csv")
 planets= data.columns[1:]
 
@@ -13,20 +15,26 @@ def mainmenu():
 -------------------------------------
         """)
     
-    uinp= int(input("Enter:"))
+    uinp= int(input("Enter your choice:"))
 
     if uinp>=1 and uinp <=4:
         if uinp==1:
             disp_data()
         elif uinp==2:
             avail_data()
-            i= int(input("Enter: "))
+            i= int(input("Enter what kind of data you want: "))
             if i==6 or i==16 or i==17:
                 point(i)
             elif i==19 or i==20:
                 point_bool(i)
             else:
-                bar(i)
+                
+                print("""
+    1. Point Graph
+    2. Line Graph
+    3. Pie Chart
+                      """)
+                k_og(i)
 
         elif uinp==3:
             analyse()
@@ -67,6 +75,7 @@ def bar(i):
     plt.ylabel(f"{label}",rotation=90)
     plt.title(f"{label} of Planets")
     plt.show()
+    os.system('cls')
     mainmenu()
 
 
@@ -80,6 +89,7 @@ def point(i):
     plt.ylabel(f"{label}",rotation=90)
     plt.title(f"{label} of Planets")
     plt.show()
+    os.system('cls')
     mainmenu()
 
 def point_bool(i):
@@ -89,11 +99,36 @@ def point_bool(i):
     plt.plot(planets,atx,marker="8",color="c")
     plt.xlabel("Planets")
     plt.xticks(rotation=45)
-    plt.ylabel(f"{label}",rotation=90)
+    plt.ylabel(f"Yes/No",rotation=90)
     plt.ylim(-1,2)
     plt.title(f"{label} of Planets")
     plt.show()
+    os.system('cls')
     mainmenu()
+
+def pie_chart(i):
+    y = data.values[i-1]
+    values = y[1:].astype(float)
+    label = y[0]
+    
+    plt.figure(figsize=(8, 8))
+    plt.pie(values, labels=planets, autopct='%1.1f%%', startangle=140)
+    plt.title(f"{label} Distribution Among Planets")
+    plt.show()
+    os.system('cls')
+    mainmenu()
+
+def k_og(i):
+    last= int(input("Enter:"))
+    if last ==1:
+        point(i)
+    elif last ==2:
+        bar(i)
+    elif last ==3:
+        pie_chart()
+    else:
+        print("Invalid Input")
+        k_og()
 
 def analyse():
     print("""
