@@ -30,8 +30,8 @@ def mainmenu():
             else:
                 
                 print("""
-    1. Point Graph
-    2. Line Graph
+    1. Line Graph
+    2. Bar Graph
     3. Pie Chart
                       """)
                 k_og(i)
