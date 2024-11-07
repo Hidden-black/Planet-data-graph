@@ -1,5 +1,4 @@
 import func
-import os
 
 print(f"""
 
