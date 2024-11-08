@@ -45,13 +45,17 @@ if ptype == "Bar":
     ax.bar(dT.index,dT[dtype],color='c')
     ax.set_title(f"{dtype} of Planets")
     ax.set_xlabel("Planets")
+    ax.set_xticklabels(dT.index,rotation=45,ha="right")
     ax.set_ylabel(ptype)
+    ax.get_tightbbox()
 
 elif ptype == "Line":
     ax.plot(dT.index,dT[dtype],color='c',marker='o')
     ax.set_title(f"{dtype} of Planets")
     ax.set_xlabel("Planets")
     ax.set_ylabel(ptype)
+    ax.set_xticklabels(dT.index,rotation=45,ha="right")
+    ax.get_tightbbox()
 
 elif ptype == "Pie":
     ax.pie(dT[dtype],labels=dT.index,autopct='%1.1f%%',

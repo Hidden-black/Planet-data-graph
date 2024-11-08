@@ -98,6 +98,7 @@ def point(i):
     plt.xticks(rotation=45)
     plt.ylabel(f"{label}",rotation=90)
     plt.title(f"{label} of Planets")
+    save_graph()
     plt.show()
     os.system('cls')
     mainmenu()
@@ -173,6 +174,7 @@ def analyse():
 def save_graph():
     imp=input(("Do you want to save graph As png (y/n)?"))
     if imp== "Y" or imp== "y":
+        plt.tight_layout()
         plt.savefig("test.png")
     else:
         breakpoint
