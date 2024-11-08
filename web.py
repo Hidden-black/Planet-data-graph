@@ -9,6 +9,8 @@ st.markdown("""
 The Data in this has been obtained from [NASA](https://nssdc.gsfc.nasa.gov/planetary/factsheet/)
             """)
 st.markdown("Anydata that is unknown has been replaced with 0.")
+st.markdown("  ")
+st.markdown("  ")
 
 datai= {
     "Mercury":[0.33,4879,5429,3.7,4.3,1407.6,4222.6,57.9,46,69.8,88,47.4,7,0.206,0.034,167,0,0,0,0],
@@ -33,9 +35,6 @@ data= pd.DataFrame(datai,index=ind)
 planets= data.columns[1:]
 dT= data.T
 dtypes=dT.columns[1:]
-st.set_page_config(page_title="Planet Data")
-
-st.title("Planet Data Graph")
 
 dtype=st.selectbox("Choose the data type to plot: ",ind)
 ptype=st.radio("Choose Plot type: ",["Bar","Line","Pie"])
