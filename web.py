@@ -12,6 +12,7 @@ st.markdown("Anydata that is unknown has been replaced with 0.")
 st.markdown("  ")
 st.markdown("  ")
 
+plt.style.use('dark_background')
 datai= {
     "Mercury":[0.33,4879,5429,3.7,4.3,1407.6,4222.6,57.9,46,69.8,88,47.4,7,0.206,0.034,167,0,0,0,0],
     "Venus":[4.87,12104,5243,8.9,10.4,-5832.5,2802,108.2,107.5,108.9,224.7,35,3.4,0.007,177.4,464,92,0,0,0],
