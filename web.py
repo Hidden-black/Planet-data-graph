@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 st.set_page_config(page_title="Planet Data")
+st.image("https://us-east-1.tixte.net/uploads/hiddenblack.tixte.co/Code_Tkf1Xuu3Xp.png")
 
-st.title("Planet Data")
 st.markdown("""
 The Data in this has been obtained from [NASA](https://nssdc.gsfc.nasa.gov/planetary/factsheet/)
             """)
