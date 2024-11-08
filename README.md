@@ -9,6 +9,7 @@
     Python<br>
         - pandas<br>
         - matplotlib<br>
+        - streamlit
 
 To start run:
 ```bash

@@ -98,7 +98,6 @@ def point(i):
     plt.xticks(rotation=45)
     plt.ylabel(f"{label}",rotation=90)
     plt.title(f"{label} of Planets")
-    save_graph()
     plt.show()
     os.system('cls')
     mainmenu()
