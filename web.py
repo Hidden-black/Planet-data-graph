@@ -22,10 +22,9 @@ ind=["Mass (10²⁷kg)","Diameter (km)","Density (kg/m³)","Gravity (m/s²)"
 
 
 data= pd.DataFrame(datai,index=ind)
-
 planets= data.columns[1:]
-
-
+dT= data.T
+dtypes=dT.columns[1:]
 st.set_page_config(page_title="Planet Data")
 
 st.title("Planet data visualization")
@@ -34,4 +33,21 @@ dtype=st.selectbox("Choose the data type to plot: ",ind)
 ptype=st.radio("Choose Plot type: ",["Bar","Line","Pie"])
 
 fig, ax= plt.subplots()
-st.markdown()
+
+if ptype == "Bar":
+    ax.bar(dT.index,dT[dtype],color='c')
+    ax.set_title(f"{dtype} of Planets")
+    ax.set_xlabel("Planets")
+    ax.set_ylabel(ptype)
+
+elif ptype == "Line":
+    ax.plot(dT.index,dT[dtype],color='c',marker='o')
+    ax.set_title(f"{dtype} of Planets")
+    ax.set_xlabel("Planets")
+    ax.set_ylabel(ptype)
+
+elif ptype == "Pie":
+    ax.pie(dT[dtype],labels=dT.index,autopct='%1.1f%%',
+           startangle=140)
+    ax.set_title(f"{dtype} of Planets")
+st.pyplot(fig)
