@@ -11,11 +11,12 @@
         - matplotlib<br>
 
 To start run:
-```cmd
+```bash
 python main.py
 ```
 <br>
-The streamlit version is stored in web.py and can be runned by
-```cmd
+The streamlit version is stored in web.py and can be runned by:
+
+```bash
 streamlit run web.py
 ```
