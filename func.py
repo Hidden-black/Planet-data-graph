@@ -150,7 +150,7 @@ def analyse():
 -------------------------------------
         """)
     
-    ainp= input("Enter:")
+    ainp= int(input("Enter:"))
 
     if ainp>=1 and ainp <=5:
         if ainp==1 or ainp==2:
