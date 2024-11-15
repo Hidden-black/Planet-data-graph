@@ -11,8 +11,7 @@ st.markdown("""
 The Data in this has been obtained from [NASA](https://nssdc.gsfc.nasa.gov/planetary/factsheet/)
             """)
 st.markdown("Anydata that is unknown has been replaced with 0.")
-st.markdown("  ")
-st.markdown("  ")
+st.divider()
 
 plt.style.use('dark_background')
 dtype=st.selectbox("Choose the data type to plot: ",pa.ind)

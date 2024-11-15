@@ -11,7 +11,6 @@ except ModuleNotFoundError:
     time.sleep(2)
     os.system('cls')
     
-
 data= pd.read_csv("data.csv")
 planets= data.columns[1:]
 
