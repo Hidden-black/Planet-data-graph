@@ -17,7 +17,7 @@ dtype=st.selectbox("Choose the data type to plot: ",pa.ind)
 ptype=st.radio("Choose Anaylyse type: ",["Ascending","Descending","Maximum","Minimum"])
 
 st.markdown(dtype)
-# lm= pa.data.columns.get_loc(f"{dtype}")
+lm= pa.data.columns.get_loc(f"{dtype}")
 
 
 def lma(imp):

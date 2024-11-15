@@ -1,8 +1,8 @@
 try:
-    import pandas as pd
-    import matplotlib.pyplot as plt
     import os
     import time
+    import pandas as pd
+    import matplotlib.pyplot as plt
 except ModuleNotFoundError:
     print("Some Modules are not installed")
     print("Installing...")
@@ -13,6 +13,8 @@ except ModuleNotFoundError:
     
 data= pd.read_csv("data.csv")
 planets= data.columns[1:]
+
+plt.style.use('dark_background')
 
 def mainmenu():
     print("""
@@ -42,7 +44,7 @@ def mainmenu():
     1. Line Graph
     2. Bar Graph
     3. Pie Chart
-                      """)
+                    """)
                 k_og(i)
 
         elif uinp==3:
@@ -148,7 +150,8 @@ def analyse():
 -------------------------------------
         """)
     
-    ainp= int(input("Enter:"))
+    ainp= input("Enter:")
+
     if ainp>=1 and ainp <=5:
         if ainp==1 or ainp==2:
             avail_data()
@@ -156,7 +159,6 @@ def analyse():
             x=data.values[imp-1]
             ximp=x[1:].astype(float)
             de= pd.Series(ximp,planets)
-
             if ainp==1:
                 print(f"{de.idxmax()} Has Highest {max(de)} {x[0]}")
                 mainmenu()
@@ -176,3 +178,6 @@ def save_graph():
         plt.savefig("test.png")
     else:
         breakpoint
+
+def alm():
+    pass
