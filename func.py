@@ -77,45 +77,46 @@ def exit():
     breakpoint
 
 def bar(i):
-    y=data.values[i-1]
-    atx= y[1:].astype(float)
-    label=y[0]
-    plt.bar(planets,atx,color="c")
+    y = data.values[i-1]
+    atx = y[1:].astype(float)
+    label = y[0]
+    
+    bars = plt.bar(planets, atx, color="c")
     plt.xlabel("Planets")
     plt.xticks(rotation=45)
-    plt.ylabel(f"{label}",rotation=90)
+    plt.ylabel(f"{label}", rotation=90)
     plt.title(f"{label} of Planets")
+    for bar, value in zip(bars, atx):
+        plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height(),
+                 f'{value:.2f}', ha='center', va='bottom', fontsize=10)
+    
     plt.show()
     os.system('cls')
     mainmenu()
 
+
+def plot_points(i, ylabel="Value", ylim=None):
+    y = data.values[i-1]
+    atx = y[1:].astype(float)
+    label = y[0]
+    
+    plt.plot(planets, atx, marker="8", color="c", linestyle='-', label=label)
+    plt.xlabel("Planets")
+    plt.xticks(rotation=45)
+    plt.ylabel(ylabel, rotation=90)
+    if ylim:
+        plt.ylim(ylim)
+    plt.title(f"{label} of Planets")
+    plt.legend()
+    plt.show()
+    os.system('cls')
+    mainmenu()
 
 def point(i):
-    y=data.values[i-1]
-    atx= y[1:].astype(float)
-    label=y[0]
-    plt.plot(planets,atx,marker="8",color="c")
-    plt.xlabel("Planets")
-    plt.xticks(rotation=45)
-    plt.ylabel(f"{label}",rotation=90)
-    plt.title(f"{label} of Planets")
-    plt.show()
-    os.system('cls')
-    mainmenu()
+    plot_points(i, ylabel="Value")
 
 def point_bool(i):
-    y=data.values[i-1]
-    atx= y[1:].astype(float)
-    label=y[0]
-    plt.plot(planets,atx,marker="8",color="c")
-    plt.xlabel("Planets")
-    plt.xticks(rotation=45)
-    plt.ylabel(f"Yes/No",rotation=90)
-    plt.ylim(-1,2)
-    plt.title(f"{label} of Planets")
-    plt.show()
-    os.system('cls')
-    mainmenu()
+    plot_points(i, ylabel="Yes/No", ylim=(-1, 2))
 
 def pie_chart(i):
     y = data.values[i-1]
