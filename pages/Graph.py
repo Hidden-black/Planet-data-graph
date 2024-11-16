@@ -12,7 +12,6 @@ The Data in this has been obtained from [NASA](https://nssdc.gsfc.nasa.gov/plane
             """)
 st.markdown("Anydata that is unknown has been replaced with 0.")
 st.divider()
-
 plt.style.use('dark_background')
 dtype=st.selectbox("Choose the data type to plot: ",pa.ind)
 ptype=st.radio("Choose Plot type: ",["Bar","Line","Pie"])

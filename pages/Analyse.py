@@ -16,26 +16,35 @@ st.divider()
 dtype=st.selectbox("Choose the data type to plot: ",pa.ind)
 ptype=st.radio("Choose Anaylyse type: ",["Ascending","Descending","Maximum","Minimum"])
 
-st.markdown(dtype)
-lm= pa.data.columns.get_loc(f"{dtype}")
+
+ci = pa.dT.columns.get_loc(dtype)
+val= pa.data.values[ci]
 
 
-def lma(imp):
-    st.markdown(pa.data.values[1])
-    de= pd.Series(pa.planets)
+series = pd.Series(val,pa.planets)
+serD= pd.DataFrame(series)
+serDT= serD.T
+# st.dataframe(series)
+# st.dataframe(serDT)
+st.divider()
 
 if ptype == "Ascending":
-    lma(dtype)
-    
-    # st.markdown(f"{de.idxmax()} Has Highest {max(de)} {x[0]}")
+    st.subheader(f"Aranged Values In Ascending Order")
+    st.markdown(dtype)
+    acen= series.sort_values()
+    st.dataframe(acen)
     pass
 
 elif ptype == "Descending":
+    st.subheader(f"Aranged Values In Descenfing Order")
+    st.markdown(dtype)
+    acen= series.sort_values()
+    st.dataframe(acen)
     pass
 
 elif ptype == "Maximum":
-
+    st.subheader(f"{series.idxmax()} Has Highest {max(series)} {dtype}")
     pass
 
 elif ptype == "Minimum":
-    pass
+    st.subheader(f"{series.idxmin()} Has Lowest {min(series)} {dtype}")

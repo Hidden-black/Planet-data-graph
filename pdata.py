@@ -20,6 +20,6 @@ ind=["Mass (10²⁷kg)","Diameter (km)","Density (kg/m³)","Gravity (m/s²)"
      ,"Number of Moons","Ring System","Global Magnetic Field"]
 
 data= pd.DataFrame(datai,index=ind)
-planets= data.columns[1:]
+planets= data.columns
 dT= data.T
 dtypes=dT.columns[1:]
