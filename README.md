@@ -1,10 +1,13 @@
 ![Banner](https://hiddenblack.tixte.co/r/Code_w7LZTsnje3.png)
-                                                                    
-### A python application to see general data of planets, Make graphs of them, etc.
-## [Experience it](https://planetdata.streamlit.app/)
-![Example](https://hiddenblack.tixte.co/r/python_abS5Ay1Ipt.png)
 
-## Setup
+
+## [Demo Available](https://planetdata.streamlit.app/) 
+### A python application to see general data of planets, Make graphs of them, Analyse data, etc.
+![Example](https://hiddenblack.tixte.co/r/chrome_CJGKFMRJGW.png)
+![Example2](https://hiddenblack.tixte.co/r/chrome_YxsX0yzBov.png)
+![Example3](https://hiddenblack.tixte.co/r/chrome_R1eVy8XkNp.png)
+
+## Setup (Terminal Based)
  Dependencies 
     Python<br>
         - pandas<br>

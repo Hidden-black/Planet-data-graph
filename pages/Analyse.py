@@ -36,7 +36,7 @@ if ptype == "Ascending":
     pass
 
 elif ptype == "Descending":
-    st.subheader(f"Aranged Values In Descenfing Order")
+    st.subheader(f"Aranged Values In Descending Order")
     st.markdown(dtype)
     acen= series.sort_values()
     st.dataframe(acen)
