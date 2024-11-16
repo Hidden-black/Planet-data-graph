@@ -46,9 +46,23 @@ elif ptype == "Line" and bl == False:
     ax.get_tightbbox()
     
 elif ptype == "Pie":
-    ax.pie(pa.dT[dtype],labels=pa.dT.index,autopct='%1.1f%%',
-           startangle=140)
+    wedges, texts, autotexts = ax.pie(
+        pa.dT[dtype],
+        labels=pa.dT.index,
+        autopct='%1.1f%%',
+        startangle=140,
+        pctdistance=0.85,
+        labeldistance=1.1
+    )
     ax.set_title(f"{dtype} of Planets")
+    
+    for text in texts:
+        text.set_fontsize(10)
+        text.set_rotation(30)
+    
+    for autotext in autotexts:
+        autotext.set_fontsize(9)
+
 
 if ptype == "Bar" and bl== True:
     bars = ax.bar(pa.dT.index, pa.dT[dtype], color='c')
